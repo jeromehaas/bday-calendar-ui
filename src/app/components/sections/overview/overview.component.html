@@ -1,0 +1,42 @@
+<div class='overview'>
+	@for (bday of bdays; track bdays) {
+		<div class='overview__group group'>
+			@if (bday.events.length) {
+				<h2 class='group__label'>{{bday.label}}</h2>
+				<div class='group__cards cards'>
+					@for (event of bday.events; track event) {
+						<div class='cards__card card' [ngClass]="{'card--active': event.isNextBday}">
+							<h3>{{event.birthdayDate | date: 'dd.MM.yyyy'}}</h3>
+							<p>{{event.birthdayDate | date: 'EEEE'}}</p>
+							<figure class='card__separator separator'></figure>
+							<table class='card__table'>
+								<tr class='card__table-row'>
+									<td class='card__table-cell'>Firstname:</td>
+									<td class='card__table-cell'>{{event.firstname}}</td>
+								</tr>
+								<tr class='card__table-row'>
+									<td class='card__table-cell'>Lastname:</td>
+									<td class='card__table-cell'>{{event.lastname}}</td>
+								</tr>
+							</table>
+							<table class='card__table'>
+								<tr class='card__table-row'>
+									<td class='card__table-cell'>Birthdate:</td>
+									<td class='card__table-cell'>{{event.birthDate | date: 'dd.MM.yyyy'}}</td>
+								</tr>
+								<tr class='card__table-row'>
+									<td class='card__table-cell'>Days left:</td>
+									<td class='card__table-cell'>{{event.remainingDays}}</td>
+								</tr>
+								<tr class='card__table-row'>
+									<td class='card__table-cell'>Turns:</td>
+									<td class='card__table-cell'>{{event.currentAge + 1}}</td>
+								</tr>
+							</table>
+						</div>
+					}
+				</div>
+			}
+		</div>
+	}
+</div>

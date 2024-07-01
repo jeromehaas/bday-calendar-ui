@@ -1,0 +1,61 @@
+.overview {
+
+	&__group, .group {
+		margin-bottom: 80px;
+
+		&__label {
+			margin-bottom: 32px;
+		}
+
+		&__cards, .cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+			&__card, .card {
+				width: 100%;
+				padding: 32px;
+
+				&__separator {
+					width: 100%;
+					height: 2px;
+					background-color: black;
+					margin: 16px auto;
+				}
+
+				&__table {
+					width: 100%;
+					margin-bottom: 16px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+				}
+
+
+				&__table-cell {
+					line-height: 24px;
+
+					&:nth-child(2) {
+						text-align: right;
+					}
+
+				}
+
+				&--active {
+					background-color: transparentize(black, 0.95);
+
+					.separator {
+						background-color: red;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+}

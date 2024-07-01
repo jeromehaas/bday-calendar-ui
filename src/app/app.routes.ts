@@ -1,20 +1,20 @@
 // IMPORTS
 import {Routes} from '@angular/router';
-import {OverviewComponent} from "./pages/overview/overview.component";
+import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 
-// EXPORTS
+// ROUTES
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'overview',
+        redirectTo: 'dashboard',
         pathMatch: 'full',
     },
     {
-        path: 'overview',
-        component: OverviewComponent,
+        path: 'dashboard',
+        component: DashboardComponent,
     },
     {
         path: '**',
-        redirectTo: '/overview',
+        redirectTo: '/dashboard',
     }
 ];

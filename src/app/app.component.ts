@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
 })
 
-// EXPORTS
+// APP COMPONENT
 export class AppComponent {
   title = 'bday-calendar-ui';
 }
