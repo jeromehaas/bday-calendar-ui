@@ -36,12 +36,10 @@ export class OverviewComponent implements OnInit {
 
 				// UPDATE STATE
 				this.bdays = data.bdays;
-				console.log(this.bdays);
 
 			},
 
 		});
-
 
 	};
 

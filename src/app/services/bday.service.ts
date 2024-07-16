@@ -2,6 +2,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {catchError, Observable, throwError} from "rxjs";
+import {environment} from "../../environments/environment";
 
 // INJECTABLE
 @Injectable({
@@ -19,7 +20,7 @@ export class BdayService {
 	fetchBdays(): Observable<any> {
 
 		// SEND REQUEST
-		return this.http.get<any>('http://localhost:3000/api/bdays').pipe(
+		return this.http.get<any>(`${environment.server.baseUrl}/api/bdays`).pipe(
 			catchError(error =>  throwError(() => new Error(error.message))),
 		);
 

@@ -1,15 +1,16 @@
 .overview {
 
 	&__group, .group {
-		margin-bottom: 80px;
+		margin-bottom: 48px;
 
 		&__label {
-			margin-bottom: 32px;
+			padding: 32px 0 0 32px;
+			margin-bottom: 16px;
 		}
 
 		&__cards, .cards {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
 			&__card, .card {
 				width: 100%;
@@ -31,7 +32,6 @@
 					}
 
 				}
-
 
 				&__table-cell {
 					line-height: 24px;
@@ -56,6 +56,5 @@
 		}
 
 	}
-
 
 }
